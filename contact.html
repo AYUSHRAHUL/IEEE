@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | IEEE CUTM Student Branch</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/IEEE.png" alt="IEEE CUTM Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="societies.html">Societies</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <button class="btn-involved">Get Involved</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid-2">
+                    <!-- Left: Info -->
+                    <div class="info-box">
+                        <div class="contact-card reveal">
+                            <span class="eyebrow" style="margin-bottom: 24px;">Get in Touch</span>
+                            <h1>Contact <span>Information</span></h1>
+                            
+                            <div class="address-list">
+                                <p style="font-size: 24px; font-weight: 800; color: #111f8a;">SCOPES Office</p>
+                                <div class="address-item"><span class="dot"></span> Room No: F-221, 2nd Floor, CRC-2</div>
+                                <div class="address-item"><span class="dot"></span> Dept of ECE, SET, CUTM</div>
+                                <div class="address-item"><span class="dot"></span> R-Sitapur, Paralakhemundi</div>
+                                <div class="address-item"><span class="dot"></span> Odisha, India - 761211</div>
+                            </div>
+
+                            <div class="contact-meta">
+                                <div class="meta-item">
+                                    <label>Phone</label>
+                                    <p><a href="tel:+917008242454">+91 7008242454</a></p>
+                                </div>
+                                <div class="meta-item">
+                                    <label>Email</label>
+                                    <p><a href="mailto:scopes2024@cutm.ac.in">scopes2024@cutm.ac.in</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reveal" style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                            <div class="stat-v-card" style="padding: 24px;">
+                                <p class="eyebrow" style="font-size: 10px;">Organizing Chair</p>
+                                <h3 style="font-size: 20px; margin-top: 10px;">Dr. Debendra Kumar Sahoo</h3>
+                                <p style="font-size: 14px; color: var(--text-muted);">+91 7008242454</p>
+                            </div>
+                            <div class="stat-v-card" style="padding: 24px;">
+                                <p class="eyebrow" style="font-size: 10px;">Convener</p>
+                                <h3 style="font-size: 20px; margin-top: 10px;">Dr. Ashok Misra</h3>
+                                <p style="font-size: 14px; color: var(--text-muted);">+91 9937563329</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Map -->
+                    <div class="reveal">
+                        <div style="height: 100%; min-height: 600px; border-radius: 2.5rem; overflow: hidden; border: 8px solid white; box-shadow: var(--shadow-md);">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14902.164893708307!2d84.1402679!3d18.8070889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3cf98111e52f3b%3A0x316b288d3abda74e!2sCenturion+University+of+Technology+and+Management+(CUTM)!5e0!3m2!1sen!2sin!4v1712511451675!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style="border: 0;"
+                                allowfullscreen=""
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <div class="form-container reveal">
+                    <div style="text-align: center; margin-bottom: 48px;">
+                        <h2 style="font-size: 40px; font-weight: 800;">Send us a <span>Message</span></h2>
+                        <p style="color: var(--text-muted); margin-top: 16px;">Have specific questions? We're here to help.</p>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="Inquiry about membership" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" placeholder="Your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="reveal">
+        <div class="container" style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px; padding-bottom: 40px;">
+            <img src="assets/IEEE.png" alt="IEEE Logo" style="height: 40px; opacity: 0.6;">
+            <p style="margin-top: 20px; color: var(--text-muted); font-size: 14px;">© 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
