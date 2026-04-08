@@ -13,7 +13,12 @@
                 <a href="index.html" class="logo">
                     <img src="assets/IEEE.png" alt="IEEE CUTM Logo">
                 </a>
-                <ul class="nav-links">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
@@ -36,7 +41,7 @@
                             <h1>Contact <span>Information</span></h1>
                             
                             <div class="address-list">
-                                <p style="font-size: 24px; font-weight: 800; color: #111f8a;">SCOPES Office</p>
+                                <p style="font-size: 24px; font-weight: 800; color: #111f8a;">IEEE CUTM Student Branch Office</p>
                                 <div class="address-item"><span class="dot"></span> Room No: F-221, 2nd Floor, CRC-2</div>
                                 <div class="address-item"><span class="dot"></span> Dept of ECE, SET, CUTM</div>
                                 <div class="address-item"><span class="dot"></span> R-Sitapur, Paralakhemundi</div>
@@ -46,11 +51,11 @@
                             <div class="contact-meta">
                                 <div class="meta-item">
                                     <label>Phone</label>
-                                    <p><a href="tel:+917008242454">+91 7008242454</a></p>
+                                    <p><a href="tel:+917008701920">+91 7008701920</a></p>
                                 </div>
                                 <div class="meta-item">
                                     <label>Email</label>
-                                    <p><a href="mailto:scopes2024@cutm.ac.in">scopes2024@cutm.ac.in</a></p>
+                                    <p><a href="mailto:prabhat.patnaik@cutm.ac.in">prabhat.patnaik@cutm.ac.in</a></p>
                                 </div>
                             </div>
                         </div>
@@ -101,10 +106,88 @@
         </section>
     </main>
 
-    <footer class="reveal">
-        <div class="container" style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px; padding-bottom: 40px;">
-            <img src="assets/IEEE.png" alt="IEEE Logo" style="height: 40px; opacity: 0.6;">
-            <p style="margin-top: 20px; color: var(--text-muted); font-size: 14px;">© 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+    <!-- Infinite Scrolling Ticker -->
+    <div class="standalone-ticker">
+        <div class="ticker">
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+        </div>
+    </div>
+
+    <footer class="main-footer reveal">
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(25, 119, 230, 0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(43, 213, 110, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(8, 27, 61, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#050a1a" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column info-col">
+                        <img src="assets/IEEE.png" alt="IEEE Logo" class="footer-logo">
+                        <p>Empowering the future through technical excellence and innovation. IEEE CUTM Student Branch leads the way in transformative technology.</p>
+                    </div>
+
+                    <div class="footer-column links-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="members.html">Members</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column links-col">
+                        <h3>What We Do</h3>
+                        <ul>
+                            <li><a href="#">Technical Workshops</a></li>
+                            <li><a href="#">Seminars</a></li>
+                            <li><a href="#">Project Hackathons</a></li>
+                            <li><a href="#">Societies</a></li>
+                            <li><a href="#">Community Outreach</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column newsletter-col">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to stay updated with our latest innovations and insights.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit">➤</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+                    <div class="bottom-links">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 

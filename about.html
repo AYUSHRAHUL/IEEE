@@ -13,7 +13,12 @@
                 <a href="index.html" class="logo">
                     <img src="assets/IEEE.png" alt="IEEE CUTM Logo">
                 </a>
-                <ul class="nav-links">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                     <li><a href="events.html">Events</a></li>
@@ -26,120 +31,249 @@
     </header>
 
     <main>
-        <section class="container" style="padding: 60px 0;">
-            <span class="eyebrow reveal">About IEEE CUTM</span>
-            <div class="content-grid reveal">
-                <div>
-                    <h1 style="font-size: 78px; font-weight: 800; line-height: 0.9; letter-spacing: -0.03em;">
-                        <span style="color: var(--primary-dark); display: block;">IEEE</span>
-                        <span style="color: var(--secondary); display: block;">CUTM</span>
-                        <span style="display: block;">STUDENT</span>
-                        <span style="display: block;">BRANCH</span>
-                    </h1>
-                    <p style="font-size: 30px; margin-top: 20px; line-height: 1.3; color: var(--text-main);">
-                        From research labs to global collaborations, we empower students to build, lead, and innovate with purpose.
-                    </p>
+        <!-- About Hero -->
+        <section class="about-hero reveal">
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="badge-tag">Est. Sep 2013</div>
+                    <h1>Leading the future of <br> <span>technical excellence</span></h1>
+                    
+                    <div class="hero-desc-container reveal-up">
+                        <p>
+                            The <strong>Institute of Electrical and Electronics Engineers Student Branch</strong> at Centurion University of Technology and Management (CUTM), Paralakhemundi, was officially established on <strong>30th September 2013</strong> under IEEE Region 10 (Asia-Pacific).
+                        </p>
+                        <br>
+                        <p>
+                            Since its inception, the branch has been actively promoting technical excellence, innovation, and professional development among students. Over the years, it has served as a vibrant platform for organizing workshops, seminars, project exhibitions, and research-oriented activities, fostering a strong culture of learning and collaboration.
+                        </p>
+                        <br>
+                        <p>
+                            With a legacy of over a decade, the IEEE Student Branch at CUTM continues to empower students to become <strong>globally competent engineers</strong> and technology leaders.
+                        </p>
+                    </div>
                 </div>
-                <div style="background: white; border: 1px solid var(--border); border-radius: 22px; padding: 40px; box-shadow: var(--shadow-md); display: flex; align-items: center; justify-content: center;">
-                    <p style="font-size: 52px; font-weight: 800; letter-spacing: -0.03em;">
-                        <span style="color: var(--primary-dark);">IEEE</span> <span style="color: var(--secondary);">CUTM</span>
-                    </p>
-                </div>
-            </div>
-            
-            <div class="stats-grid reveal" style="margin-top: 40px;">
-                <article class="stat-card">
-                    <p class="value" style="color: var(--primary);">200+</p>
-                    <p class="label">ACTIVE MEMBERS</p>
-                </article>
-                <article class="stat-card">
-                    <p class="value" style="color: var(--primary);">10+</p>
-                    <p class="label">ANNUAL EVENTS</p>
-                </article>
-                <article class="stat-card">
-                    <p class="value" style="color: var(--primary);">5</p>
-                    <p class="label">AWARDS WON</p>
-                </article>
-                <article class="stat-card">
-                    <p class="value" style="color: var(--primary);">1</p>
-                    <p class="label">INNOVATION LABS</p>
-                </article>
             </div>
         </section>
 
-        <section class="container reveal" style="padding: 80px 0; text-align: center;">
-            <h2 style="font-size: 72px; font-weight: 800; line-height: 0.95; letter-spacing: -0.03em;">Designed for builders, thinkers, and leaders.</h2>
-            <p style="font-size: 28px; color: #3e4f6d; margin-top: 20px;">Four pillars that define our community and how we grow together.</p>
-            
-            <div class="benefits-grid" style="margin-top: 60px; text-align: left; grid-template-columns: repeat(2, 1fr);">
-                <article class="benefit-card" style="padding: 40px;">
-                    <p class="eyebrow" style="margin-bottom: 20px; background: none; padding: 0; color: var(--text-muted);">Student branch</p>
-                    <h3 style="font-size: 44px; font-weight: 800; line-height: 1.02;">About IEEE CUTM</h3>
-                    <p style="font-size: 26px; line-height: 1.34; color: #3b4b66; margin-top: 20px;">A student-led community focused on engineering excellence, real-world innovation, and professional growth.</p>
-                </article>
-                <article class="benefit-card" style="padding: 40px;">
-                    <p class="eyebrow" style="margin-bottom: 20px; background: none; padding: 0; color: var(--text-muted);">Hands-on impact</p>
-                    <h3 style="font-size: 44px; font-weight: 800; line-height: 1.02;">Programs & Labs</h3>
-                    <p style="font-size: 26px; line-height: 1.34; color: #3b4b66; margin-top: 20px;">Workshops, projects, and labs that translate classroom learning into meaningful, applied outcomes.</p>
-                </article>
-                <article class="benefit-card" style="padding: 40px;">
-                    <p class="eyebrow" style="margin-bottom: 20px; background: none; padding: 0; color: var(--text-muted);">Beyond campus</p>
-                    <h3 style="font-size: 44px; font-weight: 800; line-height: 1.02;">Community & Reach</h3>
-                    <p style="font-size: 26px; line-height: 1.34; color: #3b4b66; margin-top: 20px;">Collaborations with chapters worldwide to give members a global perspective and network.</p>
-                </article>
-                <article class="benefit-card" style="padding: 40px;">
-                    <p class="eyebrow" style="margin-bottom: 20px; background: none; padding: 0; color: var(--text-muted);">Lead & build</p>
-                    <h3 style="font-size: 44px; font-weight: 800; line-height: 1.02;">Student Growth</h3>
-                    <p style="font-size: 26px; line-height: 1.34; color: #3b4b66; margin-top: 20px;">Leadership programs and peer-to-peer learning that build confidence, clarity, and impact.</p>
-                </article>
+        <!-- Stats Section -->
+        <section class="about-stats reveal">
+            <div class="container">
+                <div class="stats-premium-grid">
+                    <div class="p-stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>200+</h3>
+                            <p>Global Members</p>
+                        </div>
+                    </div>
+                    <div class="p-stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-info">
+                            <h3>100+</h3>
+                            <p>Signature Events</p>
+                        </div>
+                    </div>
+                    <div class="p-stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-info">
+                            <h3>15+</h3>
+                            <p>Awards Received</p>
+                        </div>
+                    </div>
+                    <div class="p-stat-card">
+                        <div class="stat-icon">🌐</div>
+                        <div class="stat-info">
+                            <h3>Region 10</h3>
+                            <p>Global Presence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Four Pillars Section -->
+        <section class="pillars-section reveal">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="eyebrow">The Core Framework</span>
+                    <h2>Four Pillars of <span>Growth</span></h2>
+                </div>
+                
+                <div class="pillars-grid">
+                    <article class="pillar-card">
+                        <div class="pillar-num">01</div>
+                        <h3>Technical Excellence</h3>
+                        <p>Bridging the gap between theory and industry through signature seminars and professional workshops.</p>
+                    </article>
+
+                    <article class="pillar-card">
+                        <div class="pillar-num">02</div>
+                        <h3>Global Connectivity</h3>
+                        <p>Integration with the IEEE Region 10 network, providing global exposure and collaboration opportunities.</p>
+                    </article>
+
+                    <article class="pillar-card">
+                        <div class="pillar-num">03</div>
+                        <h3>Research & Innovation</h3>
+                        <p>Dedicated platform for research-oriented activities and signature project exhibitions led by student innovators.</p>
+                    </article>
+
+                    <article class="pillar-card">
+                        <div class="pillar-num">04</div>
+                        <h3>Collaboration Culture</h3>
+                        <p>Fostering a strong culture of learning and shared collaboration across all technology disciplines at CUTM.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
         <!-- Journey Section -->
-        <section class="container reveal" style="padding: 80px 0;">
-            <p style="text-align: center; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-muted);">Timeline</p>
-            <h2 style="text-align: center; font-size: 72px; font-weight: 800; margin-top: 10px;">Our Journey</h2>
-            <p style="text-align: center; font-size: 28px; color: #3e4f6d; margin-top: 20px;">Milestones that shaped our growth and community impact.</p>
-            
-            <div class="timeline">
-                <div class="timeline-item left reveal" data-year="2013">
-                    <div class="timeline-content">
-                        <h3>Foundation</h3>
-                        <p>IEEE CUTM Student Branch was established with a vision to create a platform for technical excellence and innovation.</p>
-                    </div>
+        <section class="journey-section-box reveal">
+            <div class="container">
+                <div class="journey-header">
+                    <span class="journey-eyebrow">A Decade of Excellence</span>
+                    <h2 class="journey-title">Our <span>Journey</span></h2>
+                    <p class="journey-desc">Tracing our path from a local student collective to a world-class technical branch under Region 10.</p>
                 </div>
-                <div class="timeline-item right reveal" data-year="2015">
-                    <div class="timeline-content">
-                        <h3>National Recognition</h3>
-                        <p>Received IEEE India Council's Outstanding Student Branch Award for exceptional activities and member engagement.</p>
+                
+                <div class="timeline">
+                    <!-- 2013 -->
+                    <div class="timeline-item left reveal">
+                        <div class="timeline-content">
+                            <div class="t-icon-box"><i data-lucide="building"></i></div>
+                            <span class="year-badge">2013</span>
+                            <h3>Official Inception</h3>
+                            <p>Founded on 30th September under IEEE Region 10 (Asia-Pacific) at CUTM, Paralakhemundi, marking the start of a technical revolution.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item left reveal" data-year="2019">
-                    <div class="timeline-content">
-                        <h3>International Collaboration</h3>
-                        <p>Launched collaborative projects with IEEE student branches across the globe, expanding our network and impact.</p>
+
+                    <!-- 2016 -->
+                    <div class="timeline-item right reveal">
+                        <div class="timeline-content">
+                            <div class="t-icon-box"><i data-lucide="zap"></i></div>
+                            <span class="year-badge">2016</span>
+                            <h3>Technical Leadership</h3>
+                            <p>Began spearheading state-level workshops and seminars, establishing ourselves as a hub for engineering innovation.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item right reveal" data-year="2023">
-                    <div class="timeline-content">
-                        <h3>Innovation Hub</h3>
-                        <p>Established state-of-the-art innovation lab with cutting-edge equipment for research and development.</p>
+
+                    <!-- 2020 -->
+                    <div class="timeline-item left reveal">
+                        <div class="timeline-content">
+                            <div class="t-icon-box"><i data-lucide="microscope"></i></div>
+                            <span class="year-badge">2020</span>
+                            <h3>Innovation Hub</h3>
+                            <p>Shifted focus towards research-oriented project exhibitions, fostering a deep culture of collaborative engineering.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item left reveal" data-year="2026">
-                    <div class="timeline-content">
-                        <h3>Future Forward</h3>
-                        <p>Leading the charge in emerging technologies with focus on AI, IoT, and sustainable technology solutions.</p>
+
+                    <!-- 2023 -->
+                    <div class="timeline-item right reveal">
+                        <div class="timeline-content">
+                            <div class="t-icon-box"><i data-lucide="award"></i></div>
+                            <span class="year-badge">2023</span>
+                            <h3>The Decade Milestone</h3>
+                            <p>Celebrated 10 glorious years of empowering future engineers and receiving global recognition from HQ.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2026 -->
+                    <div class="timeline-item left reveal">
+                        <div class="timeline-content">
+                            <div class="t-icon-box"><i data-lucide="rocket"></i></div>
+                            <span class="year-badge">2026</span>
+                            <h3>Future Frontiers</h3>
+                            <p>Pushing the boundaries of technology with advanced society chapters and industry-aligned research labs.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Infinite Scrolling Ticker -->
+        <div class="standalone-ticker">
+            <div class="ticker">
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            </div>
+        </div>
     </main>
 
-    <footer class="reveal">
-        <div class="container" style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px; padding-bottom: 40px;">
-            <img src="assets/IEEE.png" alt="IEEE Logo" style="height: 40px; opacity: 0.6;">
-            <p style="margin-top: 20px; color: var(--text-muted); font-size: 14px;">© 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+    <footer class="main-footer reveal">
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(25, 119, 230, 0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(43, 213, 110, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(8, 27, 61, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#050a1a" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column info-col">
+                        <img src="assets/IEEE.png" alt="IEEE Logo" class="footer-logo">
+                        <p>Empowering the future through technical excellence and innovation. IEEE CUTM Student Branch leads the way in transformative technology.</p>
+
+                    </div>
+
+                    <div class="footer-column links-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="members.html">Members</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column links-col">
+                        <h3>What We Do</h3>
+                        <ul>
+                            <li><a href="#">Technical Workshops</a></li>
+                            <li><a href="#">Seminars</a></li>
+                            <li><a href="#">Project Hackathons</a></li>
+                            <li><a href="#">Societies</a></li>
+                            <li><a href="#">Community Outreach</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column newsletter-col">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to stay updated with our latest innovations and insights.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit">➤</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+                    <div class="bottom-links">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 

@@ -15,7 +15,12 @@
                 <a href="index.html" class="logo">
                     <img src="assets/IEEE.png" alt="IEEE CUTM Logo">
                 </a>
-                <ul class="nav-links">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
@@ -32,106 +37,252 @@
             <div class="container">
                 <!-- Faculty Steering Committee -->
                 <div class="reveal" style="margin-bottom: 80px;">
-                    <div class="section-title-row">
-                        <h2>Faculty Steering Committee</h2>
-                        <div class="count-badge">2</div>
+                    <div class="section-title-centered">
+                        <span class="eyebrow">Academic Guidance</span>
+                        <h2>Faculty Steering <span>Committee</span></h2>
+                        <div class="centered-badge">2 Members</div>
                     </div>
-                    <div class="team-grid" style="display: flex; justify-content: center; flex-wrap: wrap;">
-                        <article class="team-card" style="flex: 0 0 280px;">
+                    <div class="team-grid faculty-grid">
+                        <article class="team-card">
                             <div class="team-img-wrapper">
                                 <img src="assets/teacher/Prabhat.jpg" alt="Dr. Prabhat Kumar Patnaik">
                             </div>
-                            <h3>Dr. Prabhat Kumar Dash</h3>
+                            <h3>Dr. Prabhat Kumar Patnaik</h3>
                             <p class="role">Counselor</p>
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
-                        <article class="team-card" style="flex: 0 0 280px;">
+                        <article class="team-card">
                             <div class="team-img-wrapper">
                                 <img src="assets/teacher/Debendra-Sahoo.jpg" alt="Dr. Sudhakar Sahu">
                             </div>
                             <h3>Dr. Debendra K. Sahoo</h3>
                             <p class="role">Advisor</p>
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                     </div>
                 </div>
 
                 <!-- Student Executive Committee -->
                 <div class="reveal">
-                    <div class="section-title-row">
-                        <h2>Student Executive Committee</h2>
-                        <div class="count-badge">8</div>
+                    <div class="section-title-centered">
+                        <span class="eyebrow">Student Leadership</span>
+                        <h2>Student Executive <span>Committee</span></h2>
+                        <div class="centered-badge">8 Members</div>
                     </div>
                     <div class="team-grid">
                         <article class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/student/1.jpeg" alt="Ravindu Athapaththu">
+                                <img src="assets/student/1.jpeg" alt="Sasanam Geeta">
                             </div>
-                            <h3>Ravindu Athapaththu</h3>
-                            <p class="role">Chair</p>
+                            <h3>Sasanam Geeta</h3>
+                            <!-- <p class="role">Chair</p> -->
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                         <article class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/student/2.jpeg" alt="Akshat Agrawal">
+                                <img src="assets/student/2.jpeg" alt="Sameer Behera">
                             </div>
-                            <h3>Akshat Agrawal</h3>
-                            <p class="role">Vice Chair</p>
-                            <p class="tag">Operations & Planning</p>
+                            <h3>Sameer Behera</h3>
+                            <!-- <p class="role">Vice Chair</p> -->
+                            <!-- <p class="tag">Operations & Planning</p> -->
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                         <article class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/student/3.jpeg" alt="Lubdhak Nairith Saha Arnish">
+                                <img src="assets/student/3.jpeg" alt="sohan behera">
                             </div>
-                            <h3>Lubdhak Nairith Saha Arnish</h3>
-                            <p class="role">Vice Chair</p>
-                            <p class="tag">Student Activities & Outreach</p>
+                            <h3>sohan behera</h3>
+                            <!-- <p class="role">Vice Chair</p> -->
+                            <!-- <p class="tag">Student Activities & Outreach</p> -->
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                         <article class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/student/4.jpeg" alt="Chiranjeet Bhattacharjee">
+                                <img src="assets/student/4.jpeg" alt="Pydi Santhosh Kumar">
                             </div>
-                            <h3>Chiranjeet Bhattacharjee</h3>
-                            <p class="role">Vice Chair</p>
-                            <p class="tag">Industry & Professional Activities</p>
+                            <h3>Pydi Santhosh Kumar</h3>
+                            <!-- <p class="role">Vice Chair</p> -->
+                            <!-- <p class="tag">Industry & Professional Activities</p> -->
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                         <article class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/student/5.jpeg" alt="Niharika Nayak">
+                                <img src="assets/student/5.jpeg" alt="Prashant Kumar">
                             </div>
-                            <h3>Niharika Nayak</h3>
-                            <p class="role">General Secretary</p>
+                            <h3>Prashant Kumar</h3>
+                            <!-- <p class="role">General Secretary</p> -->
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                         <article class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/student/6.jpeg" alt="Sumit Kumar">
+                                <img src="assets/student/6.jpeg" alt="GORJILLICHANDU">
                             </div>
-                            <h3>Sumit Kumar</h3>
-                            <p class="role">Joint Secretary</p>
+                            <h3>GORJILLICHANDU</h3>
+                            <!-- <p class="role">Joint Secretary</p> -->
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                         <article class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/student/7.jpeg" alt="Anjali Sharma">
+                                <img src="assets/student/7.jpeg" alt="Dola Eswari ">
                             </div>
-                            <h3>Anjali Sharma</h3>
-                            <p class="role">Treasurer</p>
+                            <h3>Dola Eswari </h3>
+                            <!-- <p class="role">Treasurer</p> -->
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                         <article class="team-card">
                             <div class="team-img-wrapper">
-                                <img src="assets/student/8.jpeg" alt="Karthik S">
+                                <img src="assets/student/8.jpeg" alt="Rangala ompriya ">
                             </div>
-                            <h3>Karthik S</h3>
-                            <p class="role">Webmaster</p>
+                            <h3>Rangala ompriya </h3>
+                            <!-- <p class="role">Webmaster</p> -->
+                            <div class="team-social">
+                                <a href="#" class="social-btn" title="Info">ⓘ</a>
+                                <a href="mailto:example@cutm.ac.in" class="social-btn" title="Email">✉</a>
+                            </div>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Premium Join CTA Section -->
+        <section class="join-cta-section reveal-up">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Ready to shape the future?</h2>
+                    <p>Join a community of driven individuals hungry to learn, innovate, and master their craft. We're
+                        always looking for new talent.</p>
+                    <div class="cta-action">
+                        <button class="btn-status">Closed</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scrolling Ticker -->
+            <div class="ticker-wrapper">
+                <div class="ticker">
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                    <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span
+                            class="t-black">STUDENT BRANCH •</span></div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="reveal">
-        <div class="container"
-            style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px; padding-bottom: 40px;">
-            <img src="assets/IEEE.png" alt="IEEE Logo" style="height: 40px; opacity: 0.6;">
-            <p style="margin-top: 20px; color: var(--text-muted); font-size: 14px;">© 2026 IEEE CUTM Student Branch. All
-                rights reserved.</p>
+    <footer class="main-footer reveal">
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(25, 119, 230, 0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(43, 213, 110, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(8, 27, 61, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#050a1a" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column info-col">
+                        <img src="assets/IEEE.png" alt="IEEE Logo" class="footer-logo">
+                        <p>Empowering the future through technical excellence and innovation. IEEE CUTM Student Branch
+                            leads the way in transformative technology.</p>
+                    </div>
+
+                    <div class="footer-column links-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="members.html">Members</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column links-col">
+                        <h3>What We Do</h3>
+                        <ul>
+                            <li><a href="#">Technical Workshops</a></li>
+                            <li><a href="#">Seminars</a></li>
+                            <li><a href="#">Project Hackathons</a></li>
+                            <li><a href="#">Societies</a></li>
+                            <li><a href="#">Community Outreach</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column newsletter-col">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to stay updated with our latest innovations and insights.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit">➤</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+                    <div class="bottom-links">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 

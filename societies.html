@@ -13,7 +13,12 @@
                 <a href="index.html" class="logo">
                     <img src="assets/IEEE.png" alt="IEEE CUTM Logo">
                 </a>
-                <ul class="nav-links">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
@@ -30,78 +35,272 @@
             <div class="container">
                 <div style="text-align: center;">
                     <span class="eyebrow reveal">Our Chapters</span>
-                    <h1 class="reveal" style="font-size: 56px; font-weight: 800; margin-top: 16px;">Technical <span>Societies</span></h1>
-                    <p class="reveal" style="font-size: 22px; color: var(--text-muted); margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <h1 class="reveal society-title">Technical <span>Societies</span></h1>
+                    <p class="reveal society-desc">
                         Specialized communities focusing on specific fields of technology to provide members with deep technical knowledge and networking opportunities.
                     </p>
                 </div>
 
                 <div class="society-grid">
-                    <article class="society-card reveal">
+                    <article class="society-card reveal" onclick="openSocietyModal('ias')" style="cursor: pointer;">
                         <div class="society-logo-box">
-                            <img src="assets/cs-logo.png" alt="CS Logo">
-                        </div>
-                        <h3>IEEE Computer Society</h3>
-                        <div class="society-badges">
-                            <div class="badge badge-chair">
-                                <span class="badge-dot"></span>
-                                Chair: Lubdhak Nairith Saha Arnish
-                            </div>
-                            <div class="badge badge-faculty">
-                                <span class="badge-dot"></span>
-                                Faculty: Dr. Amiya Ranjan Panda
-                            </div>
-                        </div>
-                        <p>A student-led society focused on technical excellence in computer science and engineering.</p>
-                    </article>
-
-                    <article class="society-card reveal">
-                        <div class="society-logo-box">
-                            <img src="assets/ias-logo.png" alt="IAS Logo">
+                            <img src="assets/ias_society.png" alt="IAS Logo">
                         </div>
                         <h3>IEEE Industry Applications Society</h3>
                         <div class="society-badges">
-                            <div class="badge badge-chair">
-                                <span class="badge-dot"></span>
-                                Chair: Ravindu
-                            </div>
                             <div class="badge badge-faculty">
                                 <span class="badge-dot"></span>
-                                Faculty: Dr. Ranjeeta Patel
+                                Formed: 19th Dec 2023
                             </div>
                         </div>
-                        <p>Focuses on advancing the theory and practice of electrical and electronic engineering to meet industry needs.</p>
+                        <p>Approved by the IEEE MGA Board. Bridges the gap between theory and industry, focusing on electrical systems, industrial automation, and energy systems.</p>
                     </article>
 
-                    <article class="society-card reveal">
+                    <article class="society-card reveal" onclick="openSocietyModal('aps')" style="cursor: pointer;">
                         <div class="society-logo-box">
-                            <img src="assets/cis-logo.png" alt="CIS Logo">
+                            <img src="assets/aps_society.png" alt="APS Logo">
                         </div>
-                        <h3>IEEE Computational Intelligence Society</h3>
+                        <h3>IEEE Antennas and Propagation Society</h3>
                         <div class="society-badges">
-                            <div class="badge badge-chair">
-                                <span class="badge-dot"></span>
-                                Chair: Adarsh Kumar
-                            </div>
                             <div class="badge badge-faculty">
                                 <span class="badge-dot"></span>
-                                Faculty: Dr. Anil Kumar Swain
+                                Formed: 16th Jan 2024
                             </div>
                         </div>
-                        <p>Explores AI, machine learning, and intelligent systems through hands-on projects and research.</p>
+                        <p>Approved by the IEEE MGA Board. Advances knowledge in antenna design, EM wave propagation, wireless communication, and RF systems.</p>
+                    </article>
+
+                    <article class="society-card reveal" onclick="openSocietyModal('mtts')" style="cursor: pointer;">
+                        <div class="society-logo-box">
+                            <img src="assets/mtts_society.png" alt="MTT-S Logo">
+                        </div>
+                        <h3>IEEE Microwave Theory and Technology Society</h3>
+                        <div class="society-badges">
+                            <div class="badge badge-faculty">
+                                <span class="badge-dot"></span>
+                                Formed: 04th March 2026
+                            </div>
+                        </div>
+                        <p>Approved by the IEEE MGA Board. Focuses on advanced microwave engineering, RF and millimeter-wave technologies, and wireless systems.</p>
+                    </article>
+
+                    <article class="society-card reveal" onclick="openSocietyModal('cs')" style="cursor: pointer;">
+                        <div class="society-logo-box">
+                            <img src="assets/cs_society.png" alt="CS Logo">
+                        </div>
+                        <h3>IEEE Computer Society</h3>
+                        <div class="society-badges">
+                            <div class="badge badge-faculty">
+                                <span class="badge-dot"></span>
+                                Formed: 19th Feb 2026
+                            </div>
+                        </div>
+                        <p>Approved by the IEEE MGA Board. Focuses on AI, Data Science, Cybersecurity, and Software Engineering, nurtures problem-solving in IT.</p>
                     </article>
                 </div>
             </div>
         </section>
+        </section>
+
+        <!-- Infinite Scrolling Ticker -->
+        <div class="standalone-ticker">
+            <div class="ticker">
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+                <div class="ticker-item"><span class="t-blue">IEEE</span> <span class="t-green">CUTM</span> <span class="t-black">STUDENT BRANCH •</span></div>
+            </div>
+        </div>
     </main>
 
-    <footer class="reveal">
-        <div class="container" style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px; padding-bottom: 40px;">
-            <img src="assets/IEEE.png" alt="IEEE Logo" style="height: 40px; opacity: 0.6;">
-            <p style="margin-top: 20px; color: var(--text-muted); font-size: 14px;">© 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+    <footer class="main-footer reveal">
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(25, 119, 230, 0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(43, 213, 110, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(8, 27, 61, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#050a1a" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column info-col">
+                        <img src="assets/IEEE.png" alt="IEEE Logo" class="footer-logo">
+                        <p>Empowering the future through technical excellence and innovation. IEEE CUTM Student Branch leads the way in transformative technology.</p>
+                    </div>
+
+                    <div class="footer-column links-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="members.html">Members</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column links-col">
+                        <h3>What We Do</h3>
+                        <ul>
+                            <li><a href="#">Technical Workshops</a></li>
+                            <li><a href="#">Seminars</a></li>
+                            <li><a href="#">Project Hackathons</a></li>
+                            <li><a href="#">Societies</a></li>
+                            <li><a href="#">Community Outreach</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column newsletter-col">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to stay updated with our latest innovations and insights.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit">➤</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+                    <div class="bottom-links">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Society Detail Modal -->
+    <div class="modal-overlay" id="societyModal">
+        <div class="modal-card">
+            <span class="modal-close" onclick="closeSocietyModal()">&times;</span>
+            <div class="modal-scroll-area">
+                <div class="modal-header">
+                    <div class="modal-logo">
+                        <img id="m-logo" src="" alt="Logo">
+                    </div>
+                    <div class="modal-title-box">
+                        <h2 id="m-title">Society Title</h2>
+                        <div class="badge badge-faculty" id="m-date">Formed: Date</div>
+                    </div>
+                </div>
+                <div class="modal-body" id="m-body">
+                    Detailed description goes here.
+                </div>
+                <div class="focus-list" id="m-focus">
+                    <!-- Focus items will be added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide/dist/umd/lucide.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        lucide.createIcons();
+        const societyData = {
+            'ias': {
+                title: 'IEEE Industry Applications Society',
+                date: 'Formed: 19th Dec 2023',
+                logo: 'assets/ias_society.png',
+                body: 'The Institute of Electrical and Electronics Engineers Student Branch at Centurion University of Technology and Management (CUTM), Paralakhemundi, continues to expand its technical ecosystem with the establishment of specialized chapters. Notably, the IEEE Industry Applications Society Student Branch Chapter (IAS SBC) was officially formed on 19th December 2023, as approved by the IEEE Member and Geographic Activities Board. This chapter focuses on bridging the gap between theoretical knowledge and real-world industrial applications, encouraging students to explore domains such as electrical systems, industrial automation, energy systems, and emerging technologies. The IAS SBC actively promotes hands-on learning, industry interaction, and technical skill development, further strengthening the IEEE culture of innovation, collaboration, and professional excellence at CUTM. As a global leader in industrial technology, the IAS provides a unique platform for student members to connect with industry giants and stay updated with the latest standards in power and energy systems.',
+                focus: ['Bridging Professional Gaps', 'Industrial Automation', 'Energy System Design', 'Industry Interaction', 'Technical Skill Mastery', 'Workplace Safety Standards'],
+                details: 'Our chapter is committed to empowering the next generation of industrial engineers by hosting high-impact workshops and allowing students to work on live industrial simulation projects. We prioritize the adoption of sustainable energy practices and the integration of AI in industrial workflows.'
+            },
+            'aps': {
+                title: 'IEEE Antennas and Propagation Society',
+                date: 'Formed: 16th Jan 2024',
+                logo: 'assets/aps_society.png',
+                body: 'The Institute of Electrical and Electronics Engineers Student Branch at Centurion University of Technology and Management (CUTM), Paralakhemundi, further strengthened its research and innovation ecosystem with the establishment of the IEEE Antennas and Propagation Society Student Branch Chapter (APS SBC). This chapter was officially formed on 16th January 2024, as approved by the IEEE Member and Geographic Activities Board. The APS SBC focuses on advancing knowledge and research in areas such as antenna design, electromagnetic wave propagation, wireless communication, and RF systems. It provides a platform for students to engage in cutting-edge research, hands-on projects, and technical discussions, thereby enhancing their expertise in core communication engineering domains. The chapter plays a vital role in promoting innovation, interdisciplinary learning, and professional growth among students. By studying the core principles of radiation and wave interference, our members contribute to the development of robust 5G and satellite communication systems.',
+                focus: ['Antenna Engineering', 'Electromagnetic Theory', '5G/6G Wireless Tech', 'RF System Implementation', 'Satellite Communication', 'Signal Propagation Analysis'],
+                details: 'We foster an environment where students can design, simulate, and test antenna models using industry-standard software. Our goal is to nurture experts who will lead the future of global connectivity and wireless infrastructure.'
+            },
+            'mtts': {
+                title: 'IEEE Microwave Theory and Technology Society',
+                date: 'Formed: 04th March 2026',
+                logo: 'assets/mtts_society.png',
+                body: 'The Institute of Electrical and Electronics Engineers Student Branch at Centurion University of Technology and Management (CUTM), Paralakhemundi, has further expanded its domain-specific expertise with the establishment of the IEEE Microwave Theory and Technology Society Student Branch Chapter (MTT-S SBC). This chapter was officially formed on 04th March 2026, as approved by the IEEE Member and Geographic Activities Board. The MTT-S SBC focuses on advanced areas such as microwave engineering, RF and millimeter-wave technologies, wireless systems, and high-frequency circuit design. It provides a platform for students to engage in cutting-edge research, simulation, and practical applications in modern communication systems. Through technical workshops, expert talks, and project-based learning, the chapter enhances students’ competencies in next-generation technologies and strengthens the research-driven ecosystem at CUTM. Our research delves into the complexities of high-frequency wave interactions and the optimization of microwave devices for medical and military applications.',
+                focus: ['Microwave Engineering', 'Millimeter-wave Research', 'RF Circuit Design', 'Wireless Power Transfer', 'Radar Technology', 'High-Freq Simulation'],
+                details: 'The chapter organizes specialized training sessions on microwave instrumentation and RF field measurements. We aim to bridge the gap between academic research and the practical needs of the aerospace and telecommunication industries.'
+            },
+            'cs': {
+                title: 'IEEE Computer Society',
+                date: 'Formed: 19th Feb 2026',
+                logo: 'assets/cs_society.png',
+                body: 'The Institute of Electrical and Electronics Engineers Student Branch at Centurion University of Technology and Management (CUTM), Paralakhemundi, expanded its computing and digital technology initiatives with the establishment of the IEEE Computer Society Student Branch Chapter (CS SBC). This chapter was officially formed on 19th February 2026, as approved by the IEEE Member and Geographic Activities Board. The CS SBC focuses on emerging areas such as Artificial Intelligence, Data Science, Cybersecurity, Software Engineering, and Cloud Computing. It provides a dynamic platform for students to enhance their coding skills, engage in innovative projects, and participate in hackathons, technical workshops, and research activities. The chapter plays a crucial role in nurturing problem-solving abilities and preparing students for careers in the rapidly evolving computing and IT industry. As the world becomes increasingly digital, our chapter ensures that students are at the forefront of software innovation and secure computing practices.',
+                focus: ['AI & Machine Learning', 'Big Data Analytics', 'Cybersecurity Engineering', 'Cloud Infrastructure', 'Blockchain Development', 'Full-Stack Engineering'],
+                details: 'Our chapter hosts regular "Code Lab" sessions and collaborative hackathons to encourage rapid prototyping and peer-to-peer learning. We are dedicated to building a community of world-class software developers and cybersecurity experts.'
+            }
+        };
+
+        function openSocietyModal(id) {
+            const data = societyData[id];
+            if (!data) return;
+
+            document.getElementById('m-title').innerText = data.title;
+            document.getElementById('m-date').innerText = data.date;
+            document.getElementById('m-logo').src = data.logo;
+            
+            // Build extended body
+            let bodyHTML = `<p>${data.body}</p>`;
+            if (data.details) {
+                bodyHTML += `<div style="margin-top:25px; padding:20px; background:#f8fafc; border-radius:15px; border-left:4px solid var(--primary);">
+                                <h4 style="margin-bottom:10px; color:var(--primary);">Future Vision & Impact</h4>
+                                <p style="font-size:16px; font-style:italic;">${data.details}</p>
+                             </div>`;
+            }
+            document.getElementById('m-body').innerHTML = bodyHTML;
+            
+            const focusContainer = document.getElementById('m-focus');
+            focusContainer.innerHTML = '';
+            data.focus.forEach(item => {
+                focusContainer.innerHTML += `<div class="focus-item"><i>✓</i> ${item}</div>`;
+            });
+
+            const modal = document.getElementById('societyModal');
+            modal.style.display = 'flex';
+            setTimeout(() => modal.classList.add('active'), 10);
+            
+            // Prevent double scrollbars
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        }
+
+        function closeSocietyModal() {
+            const modal = document.getElementById('societyModal');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+            }, 400);
+        }
+
+        // Close on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('societyModal');
+            if (event.target == modal) {
+                closeSocietyModal();
+            }
+        }
+    </script>
 </body>
 </html>
