@@ -21,7 +21,6 @@
                     <li><a href="members.html">Members</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <button class="btn-involved">Get Involved</button>
             </nav>
         </div>
     </header>
@@ -29,27 +28,168 @@
     <main>
         <section class="event-section">
             <div class="container">
-                <h1 class="reveal">Our <span>Events</span></h1>
+                <div style="text-align: center;">
+                    <span class="eyebrow reveal">Events & Initiatives</span>
+                    <h1 class="reveal">All <span>Events</span></h1>
+                    <p class="reveal" style="font-size: 22px; color: var(--text-muted); margin-top: 20px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        Technical workshops, hackathons, and competitions crafted to elevate your engineering journey.
+                    </p>
+                </div>
+
+                <div class="event-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-btn" data-filter="live">Live</button>
+                    <button class="filter-btn" data-filter="past">Past</button>
+                </div>
+
                 <div class="event-grid-3">
-                    <article class="event-card reveal">
-                        <div class="event-img" style="background-image: url('assets/event1.jpg');"></div>
-                        <div class="event-body">
-                            <h3>IEEE Day</h3>
-                            <p>Inaugural ceremony and technical sessions featuring distinguished speakers and students.</p>
+                    <article class="event-card reveal" data-category="live" style="background-image: url('assets/event1.jpg');">
+                        <span class="event-badge" style="background: #ef4444;">Live</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <h3>Workshop on IoT</h3>
+                            <a href="gallery.html?event=iot" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
                         </div>
                     </article>
-                    <article class="event-card reveal">
-                        <div class="event-img" style="background-image: url('assets/event2.jpg');"></div>
-                        <div class="event-body">
+
+                    <article class="event-card reveal" data-category="upcoming" style="background-image: url('assets/event2.jpg');">
+                        <span class="event-badge" style="background: #3b82f6;">Upcoming</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <h3>Techno-Summit 2026</h3>
+                            <a href="gallery.html?event=summit" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/IEEEDay/1.jpg');">
+                        <span class="event-badge">Past Event</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <p style="font-size: 11px; font-weight: 800; color: #5ea2ff; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Oct 7, 2025</p>
+                            <h3>IEEE Day 2025 Celebration</h3>
+                            <a href="gallery.html?event=ieeeday" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/event2.jpg');">
+                        <span class="event-badge">Past</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
                             <h3>Blood Donation Camp</h3>
-                            <p>Community-focused event in association with Youth Red Cross CUTM and KIMS blood bank.</p>
+                            <a href="gallery.html?event=blood" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
                         </div>
                     </article>
-                    <article class="event-card reveal">
-                        <div class="event-img" style="background-image: url('assets/event3.jpg');"></div>
-                        <div class="event-body">
-                            <h3>Code Combat</h3>
-                            <p>A competitive programming challenge designed to evaluate problem-solving speed and precision.</p>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/event3.jpg');">
+                        <span class="event-badge">Past</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <h3>IEEE Systems Council Inaugural</h3>
+                            <a href="gallery.html?event=systems" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/IEEEDay/1.jpg');">
+                        <span class="event-badge">Past</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <h3>CODE COMBAT</h3>
+                            <a href="gallery.html?event=code" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/event2.jpg');">
+                        <span class="event-badge">Past</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <h3>INDUSTRIAL VISIT</h3>
+                            <a href="gallery.html?event=visit" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/event3.jpg');">
+                        <span class="event-badge">Past</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <h3>2 DAY EV WORKSHOP</h3>
+                            <a href="gallery.html?event=ev" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/EFLAIR2026/1.JPG');">
+                        <span class="event-badge">Past Event</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <p style="font-size: 11px; font-weight: 800; color: #5ea2ff; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">March 15, 2026</p>
+                            <h3>E-Flair 2K26</h3>
+                            <a href="gallery.html?event=eflair" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="live" style="background-image: url('assets/RESONANCE/R.JPG');">
+                        <span class="event-badge" style="background: #ef4444;">Live Launch</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <p style="font-size: 11px; font-weight: 800; color: #5ea2ff; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">April 10, 2026</p>
+                            <h3>RESONANCE Vol. 2 Launch</h3>
+                            <a href="gallery.html?event=resonance" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/INDUSTRY TALK/1.JPG');">
+                        <span class="event-badge">Past Event</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <p style="font-size: 11px; font-weight: 800; color: #5ea2ff; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">April 4, 2025</p>
+                            <h3>Industry Expert Talk on Electrical Energy Generation</h3>
+                            <a href="gallery.html?event=energy-talk" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card reveal" data-category="past" style="background-image: url('assets/NextGeneration/1.jpg');">
+                        <span class="event-badge">FDP</span>
+                        <div class="event-arrow">→</div>
+                        <div class="event-overlay">
+                            <p style="font-size: 11px; font-weight: 800; color: #5ea2ff; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">May 20-25, 2025</p>
+                            <h3>Next-Generation Wireless Communication and Energy Harvesting Technologies</h3>
+                            <a href="gallery.html?event=wireless-fdp" class="btn-gallery">
+                                <span><i class="icon-image"></i> View Gallery</span>
+                                <span>→</span>
+                            </a>
                         </div>
                     </article>
                 </div>

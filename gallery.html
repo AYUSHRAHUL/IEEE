@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | IEEE CUTM Student Branch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-header {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding-bottom: 80px;
+        }
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-md);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/IEEE.png" alt="IEEE CUTM Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="societies.html">Societies</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="gallery-header reveal">
+                <a href="events.html" class="back-btn">← Back to Events</a>
+                <span class="eyebrow" id="event-eyebrow">Visual Journey</span>
+                <h1 id="event-title">Our <span>Gallery</span></h1>
+                <p id="event-desc" style="margin-top: 20px; color: var(--text-muted); font-size: 20px;">Relive the moments of innovation and success.</p>
+            </div>
+
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Images will be loaded here dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="reveal">
+        <div class="container" style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px; padding-bottom: 40px;">
+            <img src="assets/IEEE.png" alt="IEEE Logo" style="height: 40px; opacity: 0.6;">
+            <p style="margin-top: 20px; color: var(--text-muted); font-size: 14px;">© 2026 IEEE CUTM Student Branch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const eventId = params.get('event');
+
+            const eventData = {
+                'iot': { title: 'Workshop on IoT', desc: 'Hands-on session on Internet of Things and Smart Devices.', images: ['event1.jpg', 'event2.jpg', 'event1.jpg', 'event2.jpg'] },
+                'summit': { title: 'Techno-Summit 2026', desc: 'Innovation and technology summit featuring top industry leaders.', images: ['event3.jpg', 'event1.jpg', 'event2.jpg'] },
+                'ieeeday': { title: 'IEEE Day 2025 Celebration', desc: 'A vibrant celebration of technical milestones and student innovation.', images: ['IEEEDay/1.jpg', 'IEEEDay/2.jpg', 'IEEEDay/3.jpg', 'IEEEDay/4.jpg'] },
+                'blood': { title: 'Blood Donation Camp', desc: 'A community initiative for saving lives.', images: ['event2.jpg', 'event1.jpg', 'event3.jpg'] },
+                'systems': { title: 'Systems Council Inaugural', desc: 'Inauguration of the IEEE Systems Council Student Branch Chapter.', images: ['event3.jpg', 'event1.jpg', 'event2.jpg'] },
+                'code': { title: 'CODE COMBAT', desc: 'Annual coding competition for developers.', images: ['event1.jpg', 'event3.jpg', 'event2.jpg'] },
+                'visit': { title: 'INDUSTRIAL VISIT', desc: 'Exploring the real-world engineering environments.', images: ['event2.jpg', 'event1.jpg'] },
+                'ev': { title: '2 DAY EV WORKSHOP', desc: 'Exploring the future of Electric Vehicles.', images: ['event3.jpg', 'event2.jpg', 'event1.jpg'] },
+                'eflair': { title: 'E-Flair 2K26', desc: 'A flagship technical event featuring robotics, design thinking, and engineering competitions.', images: ['EFLAIR2026/1.JPG', 'EFLAIR2026/2.JPG', 'EFLAIR2026/3.JPG', 'EFLAIR2026/4.JPG'] },
+                'resonance': { title: 'RESONANCE Vol. 2 Launch', desc: 'The grand unveiling of our student branch\'s premier technical newsletter.', images: ['RESONANCE/R.JPG'] },
+                'energy-talk': { title: 'Industry Expert Talk', desc: 'An insightful session on modern electrical energy generation techniques and industry trends.', images: ['INDUSTRY TALK/1.JPG', 'INDUSTRY TALK/2.JPG', 'INDUSTRY TALK/3.JPG'] },
+                'wireless-fdp': { title: 'Next-Generation Wireless FDP', desc: 'A comprehensive faculty development program on advanced wireless communication and energy harvesting systems.', images: ['NextGeneration/1.jpg', 'NextGeneration/2.jpg', 'NextGeneration/3.jpg', 'NextGeneration/4.jpg', 'NextGeneration/5.jpg'] }
+            };
+
+            const container = document.getElementById('gallery-container');
+            const titleElem = document.getElementById('event-title');
+            const eyebrowElem = document.getElementById('event-eyebrow');
+            const descElem = document.getElementById('event-desc');
+
+            if (eventId && eventData[eventId]) {
+                const data = eventData[eventId];
+                titleElem.innerHTML = `${data.title} <span>Gallery</span>`;
+                eyebrowElem.innerText = 'Event Highlights';
+                descElem.innerText = data.desc;
+
+                data.images.forEach((imgSrc, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'gallery-item reveal';
+                    item.innerHTML = `
+                        <img src="assets/${imgSrc}" alt="${data.title} image ${index + 1}">
+                        <div class="overlay">${data.title}</div>
+                    `;
+                    container.appendChild(item);
+                });
+            } else {
+                // Default view if no event selected
+                const allImages = ['event1.jpg', 'event2.jpg', 'event3.jpg', 'event1.jpg', 'event2.jpg'];
+                allImages.forEach((imgSrc, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'gallery-item reveal';
+                    item.innerHTML = `
+                        <img src="assets/${imgSrc}" alt="Gallery image ${index + 1}">
+                        <div class="overlay">General Gallery</div>
+                    `;
+                    container.appendChild(item);
+                });
+            }
+            
+            // Re-run reveal animation for dynamic content
+            if (typeof window.revealOnScroll === 'function') {
+                window.revealOnScroll();
+            }
+        });
+    </script>
+</body>
+</html>
