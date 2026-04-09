@@ -293,8 +293,8 @@ nav {
 .hero {
     display: flex;
     align-items: center;
-    min-height: 85vh;
-    padding: 210px 0 100px;
+    min-height: 80vh;
+    padding: 170px 0 60px;
     position: relative;
     overflow: hidden;
     background: radial-gradient(circle at top right, rgba(25, 119, 230, 0.05), transparent 400px),
@@ -306,7 +306,7 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 40px;
+    gap: 15px;
     z-index: 2;
 }
 
@@ -328,9 +328,9 @@ nav {
 
 
 .hero-desc {
-    font-size: 20px;
+    font-size: 18px;
     max-width: 700px;
-    margin: 0 auto 30px;
+    margin: 0 auto 15px;
 }
 
 @media (max-width: 1024px) {
@@ -388,11 +388,11 @@ nav {
 }
 
 .hero h1 {
-    font-size: 100px;
+    font-size: 85px;
     font-weight: 850;
-    line-height: 0.9;
+    line-height: 1.0;
     letter-spacing: -0.05em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .hero-title-main {
@@ -585,7 +585,7 @@ nav {
 }
 
 .h-card-left-1 {
-    top: 15%;
+    top: 25%;
     left: 4%;
     transform: rotate(-8deg);
     animation-delay: 1.2s;
@@ -600,7 +600,7 @@ nav {
 }
 
 .h-card-right-1 {
-    top: 20%;
+    top: 30%;
     right: 4%;
     transform: rotate(10deg);
     animation-delay: 1.3s;
