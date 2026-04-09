@@ -189,7 +189,7 @@
     </footer>
 
     <!-- Society Detail Modal -->
-    <div class="modal-overlay" id="societyModal">
+    <div class="modal-overlay" id="societyModal" data-lenis-prevent>
         <div class="modal-card">
             <span class="modal-close" onclick="closeSocietyModal()">&times;</span>
             <div class="modal-scroll-area">
@@ -257,7 +257,6 @@
             if (!data) return;
 
             document.getElementById('m-title').innerText = data.title;
-            document.getElementById('m-date').innerText = data.date;
             document.getElementById('m-logo').src = data.logo;
             
             // Build extended body
@@ -280,9 +279,9 @@
             modal.style.display = 'flex';
             setTimeout(() => modal.classList.add('active'), 10);
             
-            // Prevent double scrollbars
+            // Stop Lenis and handle overflow
+            if (window.lenis) window.lenis.stop();
             document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
         }
 
         function closeSocietyModal() {
@@ -290,8 +289,10 @@
             modal.classList.remove('active');
             setTimeout(() => {
                 modal.style.display = 'none';
+                
+                // Restart Lenis and restore overflow
+                if (window.lenis) window.lenis.start();
                 document.body.style.overflow = '';
-                document.documentElement.style.overflow = '';
             }, 400);
         }
 
