@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lenis Smooth Scroll
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Synchronize Lenis with scroll reveals
+    lenis.on('scroll', (e) => {
+        revealOnScroll();
+    });
+
     // Mobile Menu Toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
@@ -19,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Reveal animation on scroll
-    const revealOnScroll = () => {
+    function revealOnScroll() {
         const triggerBottom = window.innerHeight / 5 * 4;
         const revealElements = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right');
         
@@ -37,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Expose to window for dynamic content
+    // Expose to window for dynamic content (like gallery items)
     window.revealOnScroll = revealOnScroll;
 
     // High-performance Count-up Animation
@@ -52,9 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             
-            // Ease out cubic function
             const easeProgress = 1 - Math.pow(1 - progress, 3);
-            
             const currentValue = Math.floor(easeProgress * target);
             counter.innerText = currentValue;
             
@@ -69,16 +92,21 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(update);
     };
 
-    window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Initial check
 
-    // Smooth scroll for anchor links
+    // Smooth scroll for anchor links (Lenis handles this but we can use lenis.scrollTo)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                lenis.scrollTo(targetElement, {
+                    offset: -85 // Compansate for fixed header
+                });
+            }
         });
     });
     
@@ -86,19 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const progressBar = document.getElementById('scroll-progress');
     
-    window.addEventListener('scroll', () => {
+    lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
         // Shadow logic
-        if (window.scrollY > 50) {
+        if (scroll > 50) {
             header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
         } else {
             header.style.boxShadow = 'none';
         }
         
         // Progress bar logic
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        if (progressBar) progressBar.style.width = scrolled + "%";
+        if (progressBar) progressBar.style.width = (progress * 100) + "%";
     });
 
     // Event Filtering Logic
