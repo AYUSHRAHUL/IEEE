@@ -165,10 +165,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamic Hero Highlight Image Cycling
     const heroImages = [
-        'assets/EFLAIR2026/1.jpg', 'assets/IEEEDay/1.jpg', 'assets/INDUSTRY TALK/1.JPG', 'assets/RESONANCE/R.jpg',
-        'assets/EFLAIR2026/2.jpg', 'assets/IEEEDay/2.jpg', 'assets/INDUSTRY TALK/2.JPG',
-        'assets/EFLAIR2026/3.jpg', 'assets/IEEEDay/3.jpg', 'assets/INDUSTRY TALK/3.JPG',
-        'assets/EFLAIR2026/4.jpg', 'assets/IEEEDay/4.jpg'
+        'assets/eflair_2026/1.jpg', 'assets/ieee_day/1.jpg', 'assets/industry_talk/1.jpg', 'assets/resonance/1.jpg',
+        'assets/eflair_2026/2.jpg', 'assets/ieee_day/2.jpg', 'assets/industry_talk/2.jpg',
+        'assets/eflair_2026/3.jpg', 'assets/ieee_day/3.jpg', 'assets/industry_talk/3.jpg',
+        'assets/eflair_2026/4.jpg', 'assets/ieee_day/4.jpg'
     ];
 
     const hImg1 = document.getElementById('h-img-1');
