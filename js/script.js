@@ -162,4 +162,40 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
+
+    // Dynamic Hero Highlight Image Cycling
+    const heroImages = [
+        'assets/EFLAIR2026/1.jpg', 'assets/IEEEDay/1.jpg', 'assets/INDUSTRY TALK/1.JPG', 'assets/RESONANCE/R.jpg',
+        'assets/EFLAIR2026/2.jpg', 'assets/IEEEDay/2.jpg', 'assets/INDUSTRY TALK/2.JPG',
+        'assets/EFLAIR2026/3.jpg', 'assets/IEEEDay/3.jpg', 'assets/INDUSTRY TALK/3.JPG',
+        'assets/EFLAIR2026/4.jpg', 'assets/IEEEDay/4.jpg'
+    ];
+
+    const hImg1 = document.getElementById('h-img-1');
+    const hImg2 = document.getElementById('h-img-2');
+    const hImg3 = document.getElementById('h-img-3');
+    const hImg4 = document.getElementById('h-img-4');
+
+    if (hImg1 && hImg2 && hImg3 && hImg4) {
+        let indices = [0, 1, 2, 3];
+        
+        setInterval(() => {
+            // Pick 4 unique random images
+            let newIndices = [];
+            while(newIndices.length < 4) {
+                let r = Math.floor(Math.random() * heroImages.length);
+                if(!newIndices.includes(r)) newIndices.push(r);
+            }
+            
+            const images = [hImg1, hImg2, hImg3, hImg4];
+            
+            images.forEach((img, i) => {
+                img.classList.add('changing');
+                setTimeout(() => {
+                    img.src = heroImages[newIndices[i]];
+                    img.classList.remove('changing');
+                }, 500); // Smoother fade for 2s interval
+            });
+        }, 2000); // 2s interval as requested
+    }
 });
